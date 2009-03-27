@@ -8,7 +8,7 @@ module Numero
   def compile(file)
     raise "File does not exist!" if !File.exist?(file)
     File.open(filename(file), "w+") do |f|
-      f.write File.readlines(file).map { |l| l.split("").map { |c| c.unpack("C").first }.join(".")}.join(".")
+      f.write File.readlines(file).map { |l| l.split("").map { |c| c[0] }.join(".")}.join(".")
     end
   end
 
