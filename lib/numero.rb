@@ -21,7 +21,7 @@ module Numero
   end
 end
 # For converting the file back from Numero
-if __FILE__ == $0
+if __FILE__ == "/usr/bin/numero"
   include Numero
   if to_be_compiled?(ARGV[0])
     compile(ARGV[0])
